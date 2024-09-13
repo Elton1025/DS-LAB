@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 
 int main() {
@@ -6,12 +5,11 @@ int main() {
     printf("Enter number of elements:");
     scanf("%d",&n);
     int arr[n];
-    for(int i=0;i<n;i++)
+    printf("Enter elements:");
+    for(i=0;i<n;i++)
     {
-        printf("Enter element %d:",i+1);
         scanf("%d",&arr[i]);
     }
-
     for(i=1;i<n;i++)
     {
         key=arr[i];
@@ -20,13 +18,8 @@ int main() {
             arr[j+1]=arr[j];
         }
         arr[j+1]=key;
-
     }
-
     for(i=0;i<n;i++) {
         printf("%d ",arr[i]);
     }
-
-
-
 }

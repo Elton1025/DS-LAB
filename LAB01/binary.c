@@ -2,54 +2,44 @@
 
 int main() {
 
-    int n,i,key,m;
+    int n,i,key;
 
     printf("Enter number of elements:");
     scanf("%d",&n);
     int arr[n];
+    printf("Enter Elements:");
     for(i=0;i<n;i++) {
-        printf("Enter element %d:",i+1);
         scanf("%d",&arr[i]);
     }
     printf("Enter element to be searched:");
     scanf("%d",&key);
-    insertion(arr,n);
+
+    int result = binary(arr,n,key);
+    if(result !=-1) {
+        printf("Element found at %d", result);
+    }
+    else {
+        printf("Element not found");
+    }
+}
+int binary(int arr[],int n,int key) {
+    int m;
     int s=0;
     int e=n-1;
     while(s<=e) {
-        m=(s+e)/2;
+        m=s+(e-s)/2;
         if(arr[m]==key) {
-            printf("%d found at %d",key,m+1);
-            break;
+            return m+1;
         }
         else if(arr[m]>key) {
-            e=m;
-            m=(s+e)/2;
+            e=m-1;
 
         }
         else if(arr[m]<key) {
-            s=m;
-            m=(s+e)/2;
+            s=m+1;
         }
 
     }
-
-
-
-}
-void insertion(int a[], int n)
-{
-    int i, j, temp;
-    for (i = 1; i < n; i++) {
-        temp = a[i];
-        j = i - 1;
-
-        while(j>=0 && temp <= a[j])
-        {
-            a[j+1] = a[j];
-            j = j-1;
-        }
-        a[j+1] = temp;
-    }
+    return -1;
 }
 

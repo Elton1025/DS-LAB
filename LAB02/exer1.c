@@ -1,13 +1,11 @@
 #include<stdio.h>
 
 int main() {
-
     while(1)
     {
-
-
         int n;
         printf("\nEnter\n1.Length\n2.Concatenation\n3.Comparison\n4.Insert Substring\n5.Delete SubString\n6.Exit\n");
+        printf("Enter Your choice:");
         scanf("%d",&n);
         switch(n) {
             case 1: {
@@ -17,19 +15,15 @@ int main() {
                 int m=lent(a);
                 printf("%d",m);
                 break;
-
             }
             case 2: {
-
                 char b[50],c[50];
                 printf("\nEnter two strings for concatenation:");
                 scanf("%s",b);
                 scanf("%s",c);
                 concat(b,c);
                 break;
-
             }
-
             case 3: {
                 char d[50],e[50];
                 printf("\nEnter two stings for comparison:");
@@ -52,9 +46,7 @@ int main() {
                 printf("\nEnter the position where the string needs to be inserted:");
                 scanf("%d",&k);
                 inssub(f,g,k);
-
                 break;
-
             }
             case 5: {
                 char h[50],i[50];
@@ -65,21 +57,13 @@ int main() {
                 delsub(h,i);
                 printf("%s",h);
                 break;
-
-
             }
-
             case 6: {
-            return 0;
+                return 0;
             }
-
-
         }
     }
 }
-
-
-
 
 int lent(char a[])
 {

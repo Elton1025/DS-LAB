@@ -7,10 +7,9 @@ int main() {
     printf("Enter number of elements:");
     scanf("%d",&n);
     int arr[n];
-
+    printf("Enter elements:");
     for(i=0;i<n;i++)
     {
-        printf("Enter element %d:",i+1);
         scanf("%d",&arr[i]);
     }
 
@@ -21,7 +20,9 @@ int main() {
     {
         if(arr[i]==key) {
             printf("%d found at %d",key,i+1);
+            return;
         }
     }
+    printf("Element not found");
 
 }
