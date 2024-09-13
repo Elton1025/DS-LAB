@@ -32,8 +32,8 @@ char pop()
 
 typedef enum{rpara, lpara, plus, minus, multi, div, mod, eos, operand} precedence;
 
-int isp[10] = { 0, 19, 12, 12, 13, 13, 13, 0}; // in stack
-int icp[10] = {20, 19, 12, 12, 13, 13, 13, 0}; //before stack
+int isp[10] = { 0, 19, 12, 12, 13, 13, 13, 0};
+int icp[10] = {20, 19, 12, 12, 13, 13, 13, 0};
 
 precedence get_token(char c)
 {
@@ -134,7 +134,7 @@ int main()
     printf("Enter infix:\n");
     scanf("%s",infix);
     infix2Prefix();
-    printf("Pre = %s",prefix);
+    printf("Prefix = %s",prefix);
 
 
     return 0;
